@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="MealMate is an AI meal planning assistant for easy recipes, dietary preferences, and grocery lists." />
+  <title>MealMate | Your AI Meal Planning Assistant</title>
+  <style>
+    :root { --forest:#254b3c; --sage:#e8eee5; --cream:#faf8f3; --ink:#25332c; --muted:#63736a; --line:#dbe4d8; }
+    * { box-sizing:border-box; }
+    body { margin:0; font-family:Arial,Helvetica,sans-serif; color:var(--ink); background:var(--cream); line-height:1.6; }
+    .wrap { max-width:1100px; margin:auto; padding:0 26px; }
+    header { border-bottom:1px solid var(--line); background:#fffdf9; }
+    nav { display:flex; align-items:center; justify-content:space-between; min-height:76px; }
+    .brand { font-size:1.45rem; font-weight:800; color:var(--forest); letter-spacing:-.04em; }
+    .brand span { color:#88a179; }
+    .nav-note { font-size:.85rem; color:var(--muted); }
+    .hero { padding:88px 0 78px; background:linear-gradient(125deg,#faf8f3 30%,#e9efe5); }
+    .hero-inner { max-width:790px; }
+    .eyebrow { text-transform:uppercase; font-weight:700; letter-spacing:.16em; color:#58775b; font-size:.8rem; }
+    h1 { font-size:clamp(2.5rem,6vw,4.8rem); line-height:1.08; letter-spacing:-.055em; margin:16px 0 22px; color:var(--forest); }
+    .lead { font-size:1.18rem; max-width:660px; color:#52665b; margin:0 0 28px; }
+    .cta { display:inline-block; background:var(--forest); color:white; padding:14px 22px; border-radius:30px; font-weight:700; text-decoration:none; }
+    .cta:hover,.cta:focus { background:#37634f; }
+    section { padding:65px 0; }
+    h2 { font-size:2rem; letter-spacing:-.035em; color:var(--forest); margin:0 0 12px; }
+    .section-intro { max-width:690px; color:var(--muted); margin:0 0 28px; }
+    .grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:20px; }
+    .feature { background:white; border:1px solid var(--line); border-radius:20px; padding:26px; box-shadow:0 8px 26px rgba(38,65,47,.04); }
+    .feature .symbol { font-size:1.8rem; }
+    h3 { color:var(--forest); margin:12px 0 8px; font-size:1.2rem; }
+    .feature p { color:var(--muted); margin:0; }
+    .chat-section { background:var(--sage); }
+    .chat-panel { background:white; border-radius:22px; border:1px solid var(--line); padding:28px; max-width:800px; }
+    .prompts { display:flex; flex-wrap:wrap; gap:10px; margin-top:22px; }
+    .prompt { border:1px solid #b7cbb7; border-radius:999px; padding:9px 14px; color:var(--forest); background:#f8fbf6; font-size:.91rem; }
+    .chat-hint { margin:20px 0 0; color:var(--muted); font-size:.95rem; }
+    footer { padding:26px 0; border-top:1px solid var(--line); color:var(--muted); font-size:.85rem; }
+    @media (max-width:720px) { .grid { grid-template-columns:1fr; } .hero { padding:65px 0; } .nav-note { display:none; } section { padding:48px 0; } }
+  </style>
+</head>
+<body>
+  <header><div class="wrap"><nav><div class="brand">Meal<span>Mate</span> ✦</div><div class="nav-note">Your everyday AI kitchen companion</div></nav></div></header>
+  <main>
+    <div class="hero"><div class="wrap hero-inner">
+      <div class="eyebrow">Meet your personal meal-planning assistant</div>
+      <h1>Good meals start with what you already have.</h1>
+      <p class="lead">Not sure what to cook? MealMate helps turn ingredients in your kitchen into simple recipes, personalized meal ideas, and organized grocery lists.</p>
+      <a class="cta" href="#chat">Start planning meals ↓</a>
+    </div></div>
+    <section aria-labelledby="features-heading"><div class="wrap">
+      <h2 id="features-heading">A little help goes a long way.</h2>
+      <p class="section-intro">Tell MealMate what you're working with. It can adapt suggestions to your schedule, preferences, and pantry.</p>
+      <div class="grid">
+        <article class="feature"><div class="symbol" aria-hidden="true">🥑</div><h3>Use what you have</h3><p>Share a few ingredients and get practical dinner ideas with straightforward cooking steps.</p></article>
+        <article class="feature"><div class="symbol" aria-hidden="true">🥗</div><h3>Fit your preferences</h3><p>Ask for high-protein, vegetarian, quick, or budget-conscious meals that suit your needs.</p></article>
+        <article class="feature"><div class="symbol" aria-hidden="true">🛒</div><h3>Plan ahead</h3><p>Build simple multi-day meal plans and get grocery lists to make shopping easier.</p></article>
+      </div>
+    </div></section>
+    <section class="chat-section" id="chat" aria-labelledby="chat-heading"><div class="wrap">
+      <div class="chat-panel">
+        <div class="eyebrow">Chat with MealMate</div>
+        <h2 id="chat-heading">What's cooking?</h2>
+        <p>Open the MealMate chat bubble in the bottom-right corner of this page to start a conversation.</p>
+        <div class="prompts" aria-label="Example questions">
+          <span class="prompt">What can I make with chicken and rice?</span>
+          <span class="prompt">Suggest a 20-minute high-protein lunch.</span>
+          <span class="prompt">Make a three-day meal plan and grocery list.</span>
+        </div>
+        <p class="chat-hint">MealMate provides general meal-planning ideas. Check ingredients for allergens and follow safe food-handling guidance.</p>
+      </div>
+    </div></section>
+  </main>
+  <footer><div class="wrap">MealMate · AI Meal Planning Assistant · ISM 6225 Assignment 2</div></footer>
+  <!-- Published Botpress MealMate webchat widget -->
+  <script src="https://cdn.botpress.cloud/webchat/v5.0/inject.js"></script>
+  <script src="https://files.bpcontent.cloud/2026/11/08/04/20261108040923-PPT5LW8P.js" defer></script>
+</body>
+</html>
